@@ -8,12 +8,16 @@
 
 
 # display running processes.
-while true; do  
-    echo "displaying processes..."
-    exec ps aux
-    read -p "what are we killing" pid
-    kill -9 $pid
+
+boom=1
+while boom=1; do
+    echo "displaying processes"
+    ps aux
+    echo "what process would you like to kill?"
+    read pid
+    kill $pid
     break
-done 
+
+done
 
 #end 
